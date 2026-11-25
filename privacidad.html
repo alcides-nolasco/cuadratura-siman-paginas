@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad: Cuadratura de facturas (prototipo)</title>
+</head>
+<body>
+<main>
+<h1>Política de privacidad: Cuadratura de facturas (prototipo)</h1>
+<p><strong>Última actualización:</strong> 25 de noviembre de 2026.</p>
+
+<h2>1. Quién es el responsable</h2>
+<p>El responsable del prototipo es su autor, identificado en el repositorio <a href="https://github.com/alcides-nolasco">github.com/alcides-nolasco</a>. Para consultas, abra una incidencia en <a href="https://github.com/alcides-nolasco/cuadratura-siman-paginas/issues">este repositorio</a>.</p>
+
+<h2>2. Qué hace la aplicación</h2>
+<p>La aplicación lee un buzón de correo electrónico de prueba, compara las facturas electrónicas que llegan en ese buzón contra la orden de compra correspondiente y responde al remitente con el resultado.</p>
+
+<h2>3. Datos que trata</h2>
+<ul>
+  <li><strong>Correos del buzón de prueba:</strong> dirección del remitente, direcciones en copia, asunto, texto y archivos adjuntos.</li>
+  <li><strong>Archivos adjuntos:</strong> facturas electrónicas en JSON y PDF, y órdenes de compra en PDF. Pueden contener nombres de empresas, direcciones, números de identificación fiscal y montos.</li>
+  <li><strong>Datos técnicos:</strong> identificadores de los correos, resultados de la comparación y registros de errores.</li>
+</ul>
+<p>La aplicación no pide datos a personas que no envían correos al buzón de prueba, no usa cookies de seguimiento y no tiene publicidad.</p>
+
+<h2>4. Para qué se usan los datos</h2>
+<p>Solo para comparar las facturas con la orden de compra, responder al remitente, dejar constancia de cada decisión y registrar el costo de los servicios de procesamiento. No se usan para publicidad, no se venden ni se ceden a terceros con fines comerciales.</p>
+
+<h2>5. Proveedores que procesan los datos</h2>
+<ul>
+  <li><strong>Google Cloud:</strong> aloja la aplicación (Cloud Run), la base de datos (Cloud SQL, región us-central1) y los secretos de acceso.</li>
+  <li><strong>Gmail (API de Google):</strong> lectura del buzón de prueba y envío de las respuestas.</li>
+  <li><strong>TypeSafe (Jev AI):</strong> recibe descripciones de productos y líneas de factura para compararlas con la orden de compra.</li>
+  <li><strong>Anthropic (Claude) y Google (Gemini):</strong> reciben fragmentos de las facturas cuando la comparación automática no basta, para sugerir equivalencias. Se envían solo los datos necesarios para esa comparación.</li>
+</ul>
+
+<h2>6. Conservación</h2>
+<p>Los datos se conservan mientras dure la prueba. El periodo de conservación no está definido todavía y se publicará aquí antes de cualquier uso fuera de la prueba.</p>
+
+<h2>7. Uso de datos de las API de Google</h2>
+<p>El uso de la información recibida de las API de Google se ajusta a la <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de datos de usuario de los servicios de API de Google</a>, incluidos los requisitos de uso limitado. La aplicación solo solicita el acceso a Gmail necesario para leer el buzón de prueba y enviar las respuestas.</p>
+
+<h2>8. Sus derechos</h2>
+<p>Quien haya enviado un correo al buzón de prueba puede pedir la supresión de sus datos abriendo una incidencia en el repositorio indicado en el punto 1.</p>
+
+<h2>9. Cambios</h2>
+<p>Esta política puede cambiar. La fecha de la última actualización aparece arriba.</p>
+</main>
+</body>
+</html>
